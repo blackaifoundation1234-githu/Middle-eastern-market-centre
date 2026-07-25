@@ -1,0 +1,1585 @@
+<!DOCTYPE html>
+<html lang="sw">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MIDDLE EASTERN MARKET CENTRE - Premium Art & Photography</title>
+    <!-- Maelezo yatakayotokea Google Search yakieleza nani katengeneza na wapi -->
+    <meta name="description" content="Middle Eastern Market Centre (MEM) ni duka la kishua la sanaa na picha za kipekee, likiwa limetengenezwa kwa kodi za mkono na injinia Hafidh Hussein Athumani kutoka shule ya sekondari Azania, Dar es Salaam, Tanzania.">
+    
+    <meta name="author" content="Hafidh Hussein Athumani">
+    <!-- GLOBAL SEO CORE METADATA -->
+<title>MEM Online | Middle Eastern Market Centre - Premium African Art Gateway</title>
+<meta name="description" content="The premier international e-commerce platform connecting premium Tanzanian fine artists and cultural craftsmen directly with elite art collectors across the Middle East. Engineered and Managed by Hafidh Hussein Athuman.">
+<meta name="keywords" content="MEM Online, Middle Eastern Market Centre, Tanzanian Art, African Crafts, Dubai Art Market, Hafidh Hussein Athuman, Web Developer Azania">
+<meta name="author" content="Hafidh Hussein Athuman (CEO)">
+<meta name="robots" content="index, follow">
+
+<!-- SOCIAL MEDIA OPTIMIZATION (OPEN GRAPH FOR WHATSAPP, LINKEDIN, FACEBOOK) -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://vercel.app">
+<meta property="og:title" content="MEM Online | Middle Eastern Market Centre - Global Art Pipeline">
+<meta property="og:description" content="Explore premium, authentic East African art, fine paintings, and historic crafts tailored for international elite collections. Founded by Hafidh Hussein Athuman.">
+<meta property="og:image" content="https://web.app/mem-banner.jpg"> <!-- Weka picha ya bango/logo yako hapa -->
+
+<!-- TWITTER CARD OPTIMIZATION -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:url" content="https://web.app">
+<meta name="twitter:title" content="MEM Online | Middle Eastern Market Centre">
+<meta name="twitter:description" content="Connecting African creative genius with the global art economy. Engineered by Hafidh Hussein Athuman.">
+<meta name="twitter:image" content="https://web.app/mem-banner.jpg">
+
+    <meta name="geo.region" content="TZ-02">
+    <meta name="geo.placename" content="Dar es Salaam">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght=600;800&family=Montserrat:wght=300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="/file_00000000477c71fbb4d9505b708edca9.png">
+<link rel="apple-touch-icon" href="/file_00000000477c71fbb4d9505b708edca9.png">
+
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-F487G4K8GX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-F487G4K8GX');
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Store",
+  "name": "Middle Eastern Market Centre",
+  "description": "Premium Art and Cyber-Themed Market platform.",
+  "url": "https://middle-eastern-market-centre.web.app",
+  "creator": {
+    "@type": "Person",
+    "name": "Hafidh Hussein Athumani",
+    "jobTitle": "Cybersecurity and IT Enthusiast",
+    "affiliation": {
+      "@type": "EducationalOrganization",
+      "name": "Azania Secondary School"
+    }
+  },
+  "location": {
+    "@type": "Place",
+    "name": "Dar es Salaam, Tanzania"
+  }
+}
+</script>
+
+
+
+</head>
+<body>
+
+    <!-- SPLASH SCREEN -->
+    <div id="splash-screen">
+        <div class="splash-content">
+            <div class="splash-logo-wrapper">
+                <img src="/file_00000000bfac71fbac9cb78013cb1550.png" alt="Middle Eastern Market Logo" class="splash-logo">
+            </div>
+            <h1 class="splash-title">MIDDLE EASTERN MARKET</h1>
+            <p class="splash-subtitle">WE MAKE YOU DREAM COME TRUE<br> BLACK AI FOUNDATION</p>
+            <div class="luxury-loader">
+                <div class="loader-progress"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- TOAST NOTIFICATION -->
+    <div class="toast-notification" id="toastAlert">
+        <i class="fas fa-check-circle" style="color: var(--gold); font-size: 20px;"></i>
+        <span id="toastMessage">Item added to your collection!</span>
+    </div>
+
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+    
+    <!-- SIDEBAR MENU (Amazon "All" style flyout) -->
+    <div class="sidebar" id="sidebarMenu">
+        <button class="sidebar-close-btn" id="closeSidebarBtn">&times;</button>
+        <h2 class="sidebar-heading"><i class="fas fa-crown"></i> Sovereign Control Panel</h2>
+
+        <div class="sidebar-block">
+            <h3 class="sidebar-block-title">Browse Collections</h3>
+            <div class="sidebar-filter-grid">
+                <button class="cat-btn sidebar-cat-btn active" data-filter="all"><i class="fas fa-layer-group"></i> All Masterpieces</button>
+                <button class="cat-btn sidebar-cat-btn" data-filter="fine-art"><i class="fas fa-palette"></i> Fine Art</button>
+                <button class="cat-btn sidebar-cat-btn" data-filter="nature"><i class="fas fa-paw"></i> Nature &amp; Wildlife</button>
+                <button class="cat-btn sidebar-cat-btn" data-filter="landscapes"><i class="fas fa-mountain-sun"></i> Landscapes</button>
+                <button class="cat-btn sidebar-cat-btn" data-filter="architecture"><i class="fas fa-city"></i> Global Architecture</button>
+            </div>
+        </div>
+
+        <div class="sidebar-block">
+            <h3 class="sidebar-block-title">Account &amp; Access</h3>
+            <ul class="sidebar-nav-list">
+                <li id="menuProfileBtn"><i class="fas fa-user-astronaut"></i> Executive / Investor Profile</li>
+                <li id="menuAboutBtn"><i class="fas fa-gem"></i> Corporate History</li>
+                <li id="menuContactBtn"><i class="fas fa-satellite"></i> Encrypted Comms</li>
+            </ul>
+        </div>
+
+        <div class="sidebar-block">
+            <h3 class="sidebar-block-title">My Records</h3>
+            <ul class="sidebar-nav-list">
+                <li onclick="window.location.href='cart.html'"><i class="fas fa-cart-shopping"></i> Product Cart Page</li>
+                <li onclick="window.location.href='transaction-history.html'"><i class="fas fa-clock-rotate-left"></i> Transaction &amp; Auction History</li>
+            </ul>
+        </div>
+
+        <div class="sidebar-block tehama-club-box">
+            <h3 class="sidebar-block-title"><i class="fas fa-microchip"></i> TEHAMA Club</h3>
+            <p class="tehama-desc">Members get early access to live auctions, priority bidding windows, and encrypted deal alerts across the MEM network.</p>
+            <span class="tehama-badge">Member Tier: Executive VIP</span>
+        </div>
+
+        <div class="theme-toggle-section">
+            <div class="theme-label"><i class="fas fa-moon" style="color: var(--gold);"></i> <span>Cinematic Theme</span></div>
+            <label class="switch">
+                <input type="checkbox" id="themeToggleCheckbox">
+                <span class="slider"></span>
+            </label>
+        </div>
+
+        <div class="creator-box">
+            <h4>BLACK AI FOUNDATION</h4>
+            <p><strong>Chief Architect:</strong> Hafidh Hussein Athuman</p>
+            <p><strong>Institution:</strong> Azania Secondary School</p>
+            <p><strong>Origin:</strong> Tanzania 🇹🇿</p>
+        </div>
+    </div>
+
+    <!-- HEADER (Amazon-style compact sticky nav) -->
+    <header>
+        <div class="header-row">
+            <button class="hamburger-btn" id="openSidebarBtn"><i class="fas fa-bars-staggered"></i></button>
+
+            <a href="#" class="brand-logo">
+                <span class="brand-logo-main">MIDDLE EASTERN</span>
+                <span class="brand-logo-sub">MARKET CENTRE</span>
+            </a>
+
+            <div class="search-container">
+                <select class="search-category-select" id="searchCategorySelect" aria-label="Filter category">
+                    <option value="all">All</option>
+                    <option value="fine-art">Fine Art</option>
+                    <option value="nature">Nature</option>
+                    <option value="landscapes">Landscapes</option>
+                    <option value="architecture">Architecture</option>
+                </select>
+                <input type="text" id="artSearchInput" placeholder="Search masterpieces, artists, collections...">
+                <button class="search-btn-icon" type="button" aria-label="Search"><i class="fas fa-magnifying-glass"></i></button>
+            </div>
+
+            <nav class="header-utility-nav">
+                <button class="utility-link" id="headerAccountBtn">
+                    <i class="fas fa-user-astronaut"></i>
+                    <span class="utility-text"><small>Hello, Investor</small>Account &amp; Profile</span>
+                </button>
+                <button class="utility-link" data-page-target="page-auction">
+                    <i class="fas fa-gavel"></i>
+                    <span class="utility-text"><small>Bid Now</small>Live Auction Portal</span>
+                </button>
+                <button class="cart-icon-btn" id="openCartBtn">
+                    <i class="fas fa-crown"></i>
+                    <span>The Vault</span>
+                    <span class="cart-count" id="cartCountLabel">0</span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- SITE PAGE NAVIGATION (Home / Services / About / Auction / Artist Portal / Buying) -->
+    <nav class="page-nav" id="pageNav">
+        <button class="page-nav-link active" data-page-target="page-home"><i class="fas fa-house"></i> Home</button>
+        <button class="page-nav-link" data-page-target="page-services"><i class="fas fa-concierge-bell"></i> Services</button>
+        <button class="page-nav-link" data-page-target="page-about"><i class="fas fa-circle-info"></i> About</button>
+        <button class="page-nav-link" data-page-target="page-auction"><i class="fas fa-gavel"></i> Live Auction</button>
+        <button class="page-nav-link" data-page-target="page-artist"><i class="fas fa-palette"></i> Artist Portal</button>
+        <button class="page-nav-link" data-page-target="open-cart"><i class="fas fa-crown"></i> Buying / Vault</button>
+    </nav>
+
+    <!-- ============================================================ -->
+    <!-- PAGE: HOME                                                     -->
+    <!-- ============================================================ -->
+    <main id="page-home" class="site-page active">
+
+    <!-- HERO / BILLBOARD SLIDER -->
+    <div class="hero-banner">
+        <div class="hero-slide">
+            <span class="hero-eyebrow"><i class="fas fa-bolt"></i> Live Now &middot; Sovereign Vault</span>
+            <h2>Curated Digital Masterworks</h2>
+            <p>Acquire lifetime legal clearance for world-class photographic wonders and fine artistry, or place a bid on today's featured live auction.</p>
+            <div class="hero-cta-row">
+                <a href="#artGridContainer" class="hero-cta-btn hero-cta-primary">Shop Masterpieces</a>
+                <button class="hero-cta-btn hero-cta-secondary" data-page-target="page-auction"><i class="fas fa-gavel"></i> Join Live Auction</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- MARKETPLACE CONTAINER -->
+    <div class="marketplace-container">
+
+        <div class="categories">
+            <button class="cat-btn active" data-filter="all">All Masterpieces</button>
+            <button class="cat-btn" data-filter="fine-art">Fine Art</button>
+            <button class="cat-btn" data-filter="nature">Nature &amp; Wildlife</button>
+            <button class="cat-btn" data-filter="landscapes">Landscapes</button>
+            <button class="cat-btn" data-filter="architecture">Global Architecture</button>
+        </div>
+
+        <!-- Amazon-style multi-row browsing rows. All rows share one container/id
+             so the existing buy-btn / search / filter event-delegation logic in
+             script.js (scoped to #artGridContainer) keeps working untouched. -->
+        <div id="artGridContainer">
+
+            <!-- ROW 1: TRENDING LIVE AUCTIONS -->
+            <section class="product-row">
+                <div class="product-row-header">
+                    <h2><i class="fas fa-fire"></i> Trending Live Auctions</h2>
+                    <span class="row-live-badge"><i class="fas fa-circle"></i> 3 LIVE NOW</span>
+                </div>
+                <div class="art-grid">
+
+                    <div class="art-card" data-category="fine-art">
+                        <div class="art-image-wrapper">
+                            <span class="premium-tag">Masterpiece</span>
+                            <span class="live-counter-badge"><i class="fas fa-circle"></i> LIVE &middot; 12 bids</span>
+                            <img src="IMG_20260328_101517.jpg" alt="The Azure Turban Portrait">
+                            <button class="quick-view-btn" type="button"><i class="fas fa-eye"></i> Quick View</button>
+                        </div>
+                        <div class="art-details">
+                            <h3>The Azure Turban Portrait</h3>
+                            <p class="artist">By Studio Al-Hassan | Classic Vault</p>
+                            <div class="star-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-stroke"></i> <span class="rating-count">(184)</span></div>
+                            <div class="purchase-section">
+                                <div class="price">$1,450</div>
+                                <button class="buy-btn"><i class="fas fa-plus"></i> Acquire</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="art-card" data-category="architecture">
+                        <div class="art-image-wrapper">
+                            <span class="premium-tag">Ultra Luxury</span>
+                            <span class="live-counter-badge"><i class="fas fa-circle"></i> LIVE &middot; 27 bids</span>
+                            <img src="IMG_20260328_101145.jpg" alt="The Dubai Quartz Tower">
+                            <button class="quick-view-btn" type="button"><i class="fas fa-eye"></i> Quick View</button>
+                        </div>
+                        <div class="art-details">
+                            <h3>The Dubai Quartz Tower</h3>
+                            <p class="artist">By Emirates Drone Group</p>
+                            <div class="star-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i> <span class="rating-count">(96)</span></div>
+                            <div class="purchase-section">
+                                <div class="price">$2,100</div>
+                                <button class="buy-btn"><i class="fas fa-plus"></i> Acquire</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="art-card" data-category="fine-art">
+                        <div class="art-image-wrapper">
+                            <span class="premium-tag">Royal Collection</span>
+                            <span class="live-counter-badge"><i class="fas fa-circle"></i> LIVE &middot; 9 bids</span>
+                            <img src="IMG_20260328_101517.jpg" alt="Golden Desert Silk">
+                            <button class="quick-view-btn" type="button"><i class="fas fa-eye"></i> Quick View</button>
+                        </div>
+                        <div class="art-details">
+                            <h3>Golden Desert Silk</h3>
+                            <p class="artist">By Al-Zamil Fine Arts</p>
+                            <div class="star-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-stroke"></i> <span class="rating-count">(213)</span></div>
+                            <div class="purchase-section">
+                                <div class="price">$1,650</div>
+                                <button class="buy-btn"><i class="fas fa-plus"></i> Acquire</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="art-card" data-category="architecture">
+                        <div class="art-image-wrapper">
+                            <span class="premium-tag">Gothic Concept</span>
+                            <span class="live-counter-badge"><i class="fas fa-circle"></i> LIVE &middot; 15 bids</span>
+                            <img src="IMG_20260328_101434.jpg" alt="Shadows of the Cathedral">
+                            <button class="quick-view-btn" type="button"><i class="fas fa-eye"></i> Quick View</button>
+                        </div>
+                        <div class="art-details">
+                            <h3>Shadows of the Cathedral</h3>
+                            <p class="artist">By EuroHeritage Preservations</p>
+                            <div class="star-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i> <span class="rating-count">(58)</span></div>
+                            <div class="purchase-section">
+                                <div class="price">$1,420</div>
+                                <button class="buy-btn"><i class="fas fa-plus"></i> Acquire</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- ROW 2: FEATURED MASTERPIECES & FINE ART -->
+            <section class="product-row">
+                <div class="product-row-header">
+                    <h2><i class="fas fa-gem"></i> Featured Masterpieces &amp; Fine Art</h2>
+                </div>
+                <div class="art-grid">
+
+                    <div class="art-card" data-category="architecture">
+                        <div class="art-image-wrapper">
+                            <span class="premium-tag">Metropolitan</span>
+                            <img src="IMG_20260328_101145.jpg" alt="The London Rhythm">
+                            <button class="quick-view-btn" type="button"><i class="fas fa-eye"></i> Quick View</button>
+                        </div>
+                        <div class="art-details">
+                            <h3>The London Rhythm</h3>
+                            <p class="artist">By Global Cities Archival</p>
+                            <div class="star-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i> <span class="rating-count">(41)</span></div>
+                            <div class="purchase-section">
+                                <div class="price">$750</div>
+                                <button class="buy-btn"><i class="fas fa-plus"></i> Acquire</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="art-card" data-category="architecture">
+                        <div class="art-image-wrapper">
+                            <span class="premium-tag">Architectural</span>
+                            <img src="IMG_20260328_101434.jpg" alt="The Sovereign Citadel">
+                            <button class="quick-view-btn" type="button"><i class="fas fa-eye"></i> Quick View</button>
+                        </div>
+                        <div class="art-details">
+                            <h3>The Sovereign Citadel</h3>
+                            <p class="artist">By Heritage Mapping Group</p>
+                            <div class="star-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i> <span class="rating-count">(132)</span></div>
+                            <div class="purchase-section">
+                                <div class="price">$1,350</div>
+                                <button class="buy-btn"><i class="fas fa-plus"></i> Acquire</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="art-card" data-category="architecture">
+                        <div class="art-image-wrapper">
+                            <span class="premium-tag">Fine Print</span>
+                            <img src="IMG_20260328_101434.jpg" alt="Parisian Autumn Elegance">
+                            <button class="quick-view-btn" type="button"><i class="fas fa-eye"></i> Quick View</button>
+                        </div>
+                        <div class="art-details">
+                            <h3>Parisian Autumn Elegance</h3>
+                            <p class="artist">By Urban Romance Media</p>
+                            <div class="star-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-stroke"></i> <span class="rating-count">(77)</span></div>
+                            <div class="purchase-section">
+                                <div class="price">$950</div>
+                                <button class="buy-btn"><i class="fas fa-plus"></i> Acquire</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="art-card" data-category="fine-art">
+                        <div class="art-image-wrapper">
+                            <span class="premium-tag">Oil &amp; Digital</span>
+                            <img src="IMG_20260328_101517.jpg" alt="The Arabian Royalty Concept">
+                            <button class="quick-view-btn" type="button"><i class="fas fa-eye"></i> Quick View</button>
+                        </div>
+                        <div class="art-details">
+                            <h3>The Arabian Royalty Concept</h3>
+                            <p class="artist">By Gulf Contemporary Art</p>
+                            <div class="star-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i> <span class="rating-count">(305)</span></div>
+                            <div class="purchase-section">
+                                <div class="price">$1,890</div>
+                                <button class="buy-btn"><i class="fas fa-plus"></i> Acquire</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="art-card" data-category="architecture">
+                        <div class="art-image-wrapper">
+                            <span class="premium-tag">Skyscraper Edition</span>
+                            <img src="IMG_20260328_101145.jpg" alt="Neon Genesis Tokyo Tower">
+                            <button class="quick-view-btn" type="button"><i class="fas fa-eye"></i> Quick View</button>
+                        </div>
+                        <div class="art-details">
+                            <h3>Neon Genesis Tokyo Tower</h3>
+                            <p class="artist">By Cyberpunk Architecture Lab</p>
+                            <div class="star-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-stroke"></i> <span class="rating-count">(88)</span></div>
+                            <div class="purchase-section">
+                                <div class="price">$1,550</div>
+                                <button class="buy-btn"><i class="fas fa-plus"></i> Acquire</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="art-card" data-category="architecture">
+                        <div class="art-image-wrapper">
+                            <span class="premium-tag">Royal Heritage</span>
+                            <img src="IMG_bigben_london.jpg" alt="Big Ben & Westminster Rush">
+                            <button class="quick-view-btn" type="button"><i class="fas fa-eye"></i> Quick View</button>
+                        </div>
+                        <div class="art-details">
+                            <h3>Big Ben &amp; Westminster Rush</h3>
+                            <p class="artist">By London Heritage Photography</p>
+                            <div class="star-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i> <span class="rating-count">(142)</span></div>
+                            <div class="purchase-section">
+                                <div class="price">$1,780</div>
+                                <button class="buy-btn"><i class="fas fa-plus"></i> Acquire</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="art-card" data-category="architecture">
+                        <div class="art-image-wrapper">
+                            <span class="premium-tag">Fairytale Palace</span>
+                            <img src="IMG_penapalace_sintra.jpg" alt="The Enchanted Pena Palace">
+                            <button class="quick-view-btn" type="button"><i class="fas fa-eye"></i> Quick View</button>
+                        </div>
+                        <div class="art-details">
+                            <h3>The Enchanted Pena Palace</h3>
+                            <p class="artist">By Sintra Royal Archives</p>
+                            <div class="star-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i> <span class="rating-count">(167)</span></div>
+                            <div class="purchase-section">
+                                <div class="price">$1,920</div>
+                                <button class="buy-btn"><i class="fas fa-plus"></i> Acquire</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="art-card" data-category="fine-art">
+                        <div class="art-image-wrapper">
+                            <span class="premium-tag">Renaissance</span>
+                            <img src="1000035346.jpg" alt="Timeless Enigma">
+                            <button class="quick-view-btn" type="button"><i class="fas fa-eye"></i> Quick View</button>
+                        </div>
+                        <div class="art-details">
+                            <h3>Timeless Enigma</h3>
+                            <p class="artist">By Old Masters Reproduction House</p>
+                            <div class="star-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i> <span class="rating-count">(410)</span></div>
+                            <div class="purchase-section">
+                                <div class="price">$2,450</div>
+                                <button class="buy-btn"><i class="fas fa-plus"></i> Acquire</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="art-card" data-category="fine-art">
+                        <div class="art-image-wrapper">
+                            <span class="premium-tag">Vivid Portrait</span>
+                            <img src="1000035348.jpg" alt="The Painted Soul">
+                            <button class="quick-view-btn" type="button"><i class="fas fa-eye"></i> Quick View</button>
+                        </div>
+                        <div class="art-details">
+                            <h3>The Painted Soul</h3>
+                            <p class="artist">By Chroma Vision Studio</p>
+                            <div class="star-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i> <span class="rating-count">(63)</span></div>
+                            <div class="purchase-section">
+                                <div class="price">$1,180</div>
+                                <button class="buy-btn"><i class="fas fa-plus"></i> Acquire</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- ROW 3: NEWLY ARRIVED PHOTOGRAPHIC ASSETS -->
+            <section class="product-row">
+                <div class="product-row-header">
+                    <h2><i class="fas fa-camera-retro"></i> Newly Arrived Photographic Assets</h2>
+                    <span class="row-new-badge">Just In</span>
+                </div>
+                <div class="art-grid">
+
+                    <div class="art-card" data-category="nature">
+                        <div class="art-image-wrapper">
+                            <span class="premium-tag">Exclusive</span>
+                            <img src="IMG_20260328_101239.jpg" alt="The White Stallion's Autumn">
+                            <button class="quick-view-btn" type="button"><i class="fas fa-eye"></i> Quick View</button>
+                        </div>
+                        <div class="art-details">
+                            <h3>The White Stallion's Autumn</h3>
+                            <p class="artist">By Vanguard Nature Photography</p>
+                            <div class="star-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i> <span class="rating-count">(34)</span></div>
+                            <div class="purchase-section">
+                                <div class="price">$850</div>
+                                <button class="buy-btn"><i class="fas fa-plus"></i> Acquire</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="art-card" data-category="landscapes">
+                        <div class="art-image-wrapper">
+                            <span class="premium-tag">Trending</span>
+                            <img src="IMG_20260328_100910.jpg" alt="Oceanic Serenity Cottage">
+                            <button class="quick-view-btn" type="button"><i class="fas fa-eye"></i> Quick View</button>
+                        </div>
+                        <div class="art-details">
+                            <h3>Oceanic Serenity Cottage</h3>
+                            <p class="artist">By Coastal Horizons Art</p>
+                            <div class="star-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-stroke"></i><i class="far fa-star"></i> <span class="rating-count">(19)</span></div>
+                            <div class="purchase-section">
+                                <div class="price">$620</div>
+                                <button class="buy-btn"><i class="fas fa-plus"></i> Acquire</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="art-card" data-category="nature">
+                        <div class="art-image-wrapper">
+                            <span class="premium-tag">Premium HD</span>
+                            <img src="IMG_20260328_101023.jpg" alt="Equator Underworld Split">
+                            <button class="quick-view-btn" type="button"><i class="fas fa-eye"></i> Quick View</button>
+                        </div>
+                        <div class="art-details">
+                            <h3>Equator Underworld Split</h3>
+                            <p class="artist">By Marine Biological Media</p>
+                            <div class="star-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i> <span class="rating-count">(122)</span></div>
+                            <div class="purchase-section">
+                                <div class="price">$1,100</div>
+                                <button class="buy-btn"><i class="fas fa-plus"></i> Acquire</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="art-card" data-category="nature">
+                        <div class="art-image-wrapper">
+                            <span class="premium-tag">Fine Print</span>
+                            <img src="IMG_20260328_101328.jpg" alt="Innocence in the Meadow">
+                            <button class="quick-view-btn" type="button"><i class="fas fa-eye"></i> Quick View</button>
+                        </div>
+                        <div class="art-details">
+                            <h3>Innocence in the Meadow</h3>
+                            <p class="artist">By Bella Fauna Studios</p>
+                            <div class="star-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i> <span class="rating-count">(8)</span></div>
+                            <div class="purchase-section">
+                                <div class="price">$500</div>
+                                <button class="buy-btn"><i class="fas fa-plus"></i> Acquire</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="art-card" data-category="nature">
+                        <div class="art-image-wrapper">
+                            <span class="premium-tag">Award Winner</span>
+                            <img src="IMG_20260328_101023.jpg" alt="The Ancient Voyager">
+                            <button class="quick-view-btn" type="button"><i class="fas fa-eye"></i> Quick View</button>
+                        </div>
+                        <div class="art-details">
+                            <h3>The Ancient Voyager</h3>
+                            <p class="artist">By Deep Sea Explorations</p>
+                            <div class="star-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-stroke"></i> <span class="rating-count">(160)</span></div>
+                            <div class="purchase-section">
+                                <div class="price">$1,200</div>
+                                <button class="buy-btn"><i class="fas fa-plus"></i> Acquire</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="art-card" data-category="landscapes">
+                        <div class="art-image-wrapper">
+                            <span class="premium-tag">Nature</span>
+                            <img src="IMG_20260328_100910.jpg" alt="The Enchanted Creek Path">
+                            <button class="quick-view-btn" type="button"><i class="fas fa-eye"></i> Quick View</button>
+                        </div>
+                        <div class="art-details">
+                            <h3>The Enchanted Creek Path</h3>
+                            <p class="artist">By Nordic Wilderness Lab</p>
+                            <div class="star-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i> <span class="rating-count">(29)</span></div>
+                            <div class="purchase-section">
+                                <div class="price">$900</div>
+                                <button class="buy-btn"><i class="fas fa-plus"></i> Acquire</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="art-card" data-category="landscapes">
+                        <div class="art-image-wrapper">
+                            <span class="premium-tag">Limited Edition</span>
+                            <img src="IMG_20260328_100910.jpg" alt="Mist Over Serengeti">
+                            <button class="quick-view-btn" type="button"><i class="fas fa-eye"></i> Quick View</button>
+                        </div>
+                        <div class="art-details">
+                            <h3>Mist Over Serengeti</h3>
+                            <p class="artist">By African Horizon Shutter</p>
+                            <div class="star-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i> <span class="rating-count">(201)</span></div>
+                            <div class="purchase-section">
+                                <div class="price">$1,150</div>
+                                <button class="buy-btn"><i class="fas fa-plus"></i> Acquire</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="art-card" data-category="nature">
+                        <div class="art-image-wrapper">
+                            <span class="premium-tag">Wild Encounters</span>
+                            <img src="IMG_20260328_101239.jpg" alt="The Ghost of the Steppes">
+                            <button class="quick-view-btn" type="button"><i class="fas fa-eye"></i> Quick View</button>
+                        </div>
+                        <div class="art-details">
+                            <h3>The Ghost of the Steppes</h3>
+                            <p class="artist">By Nomad Wildlife Media</p>
+                            <div class="star-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-stroke"></i><i class="far fa-star"></i> <span class="rating-count">(46)</span></div>
+                            <div class="purchase-section">
+                                <div class="price">$980</div>
+                                <button class="buy-btn"><i class="fas fa-plus"></i> Acquire</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="art-card" data-category="nature">
+                        <div class="art-image-wrapper">
+                            <span class="premium-tag">Macro Zoom</span>
+                            <img src="IMG_20260328_101328.jpg" alt="Whispers of Spring Blossom">
+                            <button class="quick-view-btn" type="button"><i class="fas fa-eye"></i> Quick View</button>
+                        </div>
+                        <div class="art-details">
+                            <h3>Whispers of Spring Blossom</h3>
+                            <p class="artist">By Botanic Studio Tokyo</p>
+                            <div class="star-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i> <span class="rating-count">(12)</span></div>
+                            <div class="purchase-section">
+                                <div class="price">$480</div>
+                                <button class="buy-btn"><i class="fas fa-plus"></i> Acquire</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="art-card" data-category="nature">
+                        <div class="art-image-wrapper">
+                            <span class="premium-tag">Coral Reef HD</span>
+                            <img src="IMG_20260328_101023.jpg" alt="Bioluminescent Abyss">
+                            <button class="quick-view-btn" type="button"><i class="fas fa-eye"></i> Quick View</button>
+                        </div>
+                        <div class="art-details">
+                            <h3>Bioluminescent Abyss</h3>
+                            <p class="artist">By Oceanic Research Network</p>
+                            <div class="star-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-stroke"></i> <span class="rating-count">(99)</span></div>
+                            <div class="purchase-section">
+                                <div class="price">$1,300</div>
+                                <button class="buy-btn"><i class="fas fa-plus"></i> Acquire</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="art-card" data-category="landscapes">
+                        <div class="art-image-wrapper">
+                            <span class="premium-tag">Scenic Master</span>
+                            <img src="IMG_20260328_100910.jpg" alt="Emerald River Valley">
+                            <button class="quick-view-btn" type="button"><i class="fas fa-eye"></i> Quick View</button>
+                        </div>
+                        <div class="art-details">
+                            <h3>Emerald River Valley</h3>
+                            <p class="artist">By Alpine Lens Syndicate</p>
+                            <div class="star-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i> <span class="rating-count">(53)</span></div>
+                            <div class="purchase-section">
+                                <div class="price">$870</div>
+                                <button class="buy-btn"><i class="fas fa-plus"></i> Acquire</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="art-card" data-category="landscapes">
+                        <div class="art-image-wrapper">
+                            <span class="premium-tag">Tropical Escape</span>
+                            <img src="IMG_beachhouse_tropical.jpg" alt="Tropical Beach Retreat">
+                            <button class="quick-view-btn" type="button"><i class="fas fa-eye"></i> Quick View</button>
+                        </div>
+                        <div class="art-details">
+                            <h3>Tropical Beach Retreat</h3>
+                            <p class="artist">By Coastal Watercolor Guild</p>
+                            <div class="star-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-stroke"></i> <span class="rating-count">(71)</span></div>
+                            <div class="purchase-section">
+                                <div class="price">$690</div>
+                                <button class="buy-btn"><i class="fas fa-plus"></i> Acquire</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </section>
+
+        </div>
+    </div>
+
+    </main>
+    <!-- END PAGE: HOME -->
+
+    <!-- AMAZON-STYLE QUICK VIEW MODAL -->
+    <div class="modal-overlay quick-view-overlay" id="quickViewModal">
+        <div class="modal-content quick-view-content">
+            <span class="close-modal" id="closeQuickViewBtn">&times;</span>
+            <div class="quick-view-body">
+                <div class="quick-view-media">
+                    <img id="qvImage" src="" alt="">
+                    <span class="premium-tag" id="qvTag">Masterpiece</span>
+                </div>
+                <div class="quick-view-info">
+                    <h2 id="qvTitle" class="quick-view-title">Artwork Title</h2>
+                    <p class="artist" id="qvArtist">By Artist Studio</p>
+                    <div class="star-rating" id="qvRating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-stroke"></i> <span class="rating-count">(120 reviews)</span></div>
+                    <div class="qv-price" id="qvPrice">$0</div>
+                    <div class="qv-license-box">
+                        <h4><i class="fas fa-shield-halved"></i> License &amp; Rights Clearance</h4>
+                        <p>This acquisition includes a simulated worldwide, perpetual, royalty-free commercial license. Full resolution files, print rights, and resale clearance are bundled with every Vault transaction, subject to final review by MEM's licensing desk.</p>
+                    </div>
+                    <div class="qv-details-grid">
+                        <div><span>Resolution</span><strong>8000 &times; 6000px (Simulated)</strong></div>
+                        <div><span>Format</span><strong>RAW + High-Res JPG</strong></div>
+                        <div><span>Delivery</span><strong>Instant Vault Access</strong></div>
+                        <div><span>Clearance</span><strong>Commercial + Editorial</strong></div>
+                    </div>
+                    <button class="submit-btn qv-add-to-vault-btn" id="qvAddToVaultBtn"><i class="fas fa-crown"></i> Add to Vault &amp; Checkout</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- PAGE: SERVICES                                                 -->
+    <!-- ============================================================ -->
+    <main id="page-services" class="site-page">
+        <div class="static-page-hero">
+            <span class="hero-eyebrow"><i class="fas fa-concierge-bell"></i> What We Offer</span>
+            <h2>Sovereign-Grade Services</h2>
+            <p>From private curation to corporate licensing, MEM ONLINE runs the full pipeline between master artists and global buyers.</p>
+        </div>
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon"><i class="fas fa-file-signature"></i></div>
+                <h3>Commercial Licensing</h3>
+                <p>Perpetual, royalty-free licensing packages for editorial, print, and commercial use — cleared and delivered instantly through your Vault.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon"><i class="fas fa-gavel"></i></div>
+                <h3>Live Auction Hosting</h3>
+                <p>Real-time bidding infrastructure for high-value masterpieces, with live bidder dashboards and secure payment confirmation.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon"><i class="fas fa-user-tie"></i></div>
+                <h3>Artist Representation</h3>
+                <p>We onboard, authenticate, and represent independent photographers and fine artists, connecting their work directly to investors.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon"><i class="fas fa-building-columns"></i></div>
+                <h3>Corporate Art Leasing</h3>
+                <p>Rotating curated collections for corporate lobbies, hotels, and executive offices, billed on flexible leasing terms.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon"><i class="fas fa-shield-halved"></i></div>
+                <h3>Authentication &amp; Escrow</h3>
+                <p>Every acquisition is logged with a simulated chain-of-custody record, protecting both collector and artist through the transaction.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon"><i class="fas fa-headset"></i></div>
+                <h3>Concierge Support</h3>
+                <p>A dedicated investor desk for private viewings, custom commissions, and bespoke portfolio building — reachable via Secure Comms.</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- ============================================================ -->
+    <!-- PAGE: ABOUT                                                    -->
+    <!-- ============================================================ -->
+    <main id="page-about" class="site-page">
+        <div class="static-page-hero">
+            <span class="hero-eyebrow"><i class="fas fa-circle-info"></i> Our Story</span>
+            <h2>The MEM ONLINE Dossier</h2>
+            <p>A sovereign vault built to bridge master photographers and fine artists with serious global collectors.</p>
+        </div>
+        <div class="about-content-grid">
+            <div class="about-text-block">
+                <h3>Who We Are</h3>
+                <p>MIDDLE EASTERN MARKET CENTRE (MEM ONLINE) is a luxury digital licensing house. We curate photographic and fine-art masterworks, then clear them for commercial, editorial, and private-collector use through a single, secure Vault checkout.</p>
+                <h3>How It Works</h3>
+                <p>Artists submit work through the Artist Portal. Our desk authenticates and prices each piece. Collectors browse, bid on live auctions, or acquire instantly — every transaction is logged and licensed the same day.</p>
+                <h3>Platform Development</h3>
+                <p>Chief Architect: <strong>Hafidh Hussein Athuman</strong><br>
+                Institution: Azania Secondary School, Tanzania 🇹🇿<br>
+                <span style="color:var(--gold); font-weight:600;">BLACK AI FOUNDATION ARCHITECTURE</span></p>
+            </div>
+            <div class="about-stats-block">
+                <div class="about-stat"><strong>20+</strong><span>Curated Masterpieces</span></div>
+                <div class="about-stat"><strong>Live</strong><span>Auction Infrastructure</span></div>
+                <div class="about-stat"><strong>24/7</strong><span>Encrypted Comms Desk</span></div>
+                <div class="about-stat"><strong>100%</strong><span>Licensing Clearance</span></div>
+            </div>
+        </div>
+    </main>
+
+    <!-- VAULT / CART MODAL -->
+    <div class="modal-overlay" id="cartModal">
+        <div class="modal-content">
+            <span class="close-modal" id="closeCartBtn">&times;</span>
+            <h2>Acquisition Vault</h2>
+            <div class="cart-items-list" id="cartItemsContainer"></div>
+            <div class="cart-total-box"><span>Total Value:</span><span id="cartTotalLabel" style="color:var(--gold);">$0</span></div>
+            <form id="advancedPurchaseForm">
+                <div class="form-group"><label>Investor Name</label><input type="text" id="fullName" placeholder="Your Name" required></div>
+                <div class="form-group"><label>Email Address</label><input type="email" id="emailAddress" placeholder="investor@domain.com" required></div>
+                <div class="form-group"><label>Shipping / Delivery Address</label><input type="text" id="shippingAddress" placeholder="Mtaa, Jiji, Nchi" required></div>
+                <div class="form-group"><label>Delivery Method</label><select id="deliveryMethod"><option value="standard">Standard Vault Delivery (3-5 Days)</option><option value="express">Express Concierge Delivery (24 Hrs)</option></select></div>
+                <div class="form-group"><label>Clearance Channel</label><select id="paymentMethod"><option value="stripe">Encrypted Debit Card Connection</option><option value="paypal">PayPal Global Network</option><option value="mobile_vodacom">Mobile Money (Vodacom M-Pesa)</option></select></div>
+                <button type="submit" class="submit-btn">Authorize Asset Transfer</button>
+            </form>
+            <a href="transaction-history.html" class="view-history-link"><i class="fas fa-clock-rotate-left"></i> View Full Transaction &amp; Auction History</a>
+        </div>
+    </div>
+
+    <!-- PROFILE MODAL -->
+    <div class="modal-overlay" id="profileModal">
+        <div class="modal-content">
+            <span class="close-modal" id="closeProfileBtn">&times;</span>
+            <h2>Investor Profile</h2>
+            <div style="text-align: center; margin: 20px 0;">
+                <i class="fas fa-user-astronaut" style="font-size: 80px; color: var(--gold);"></i>
+                <h3 style="margin-top: 15px; letter-spacing: 1px;">Premium Art Collector</h3>
+                <p style="color: var(--text-muted); font-size: 13px; text-transform: uppercase; margin-top: 5px;">Clearance Tier: Executive VIP</p>
+            </div>
+            <div style="background: rgba(0,0,0,0.2); padding: 20px; border-radius: 12px; font-size: 14px; border: 1px solid var(--border-color);">
+                <p style="margin-bottom: 10px; display: flex; justify-content: space-between;"><span>Authentication Status:</span> <strong style="color: #4cd137;">SECURED ✓</strong></p>
+                <p style="display: flex; justify-content: space-between;"><span>Licensed Purchases:</span> <strong style="color: var(--gold);" id="profilePurchaseCount">0 Assets</strong></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ABOUT MODAL -->
+    <div class="modal-overlay" id="aboutModal">
+        <div class="modal-content">
+            <span class="close-modal" id="closeAboutBtn">&times;</span>
+            <h2>Corporate Dossier</h2>
+            <p style="font-size: 15px; line-height: 1.8; color: var(--text-muted); margin-bottom: 20px; text-align: justify;">
+                MIDDLE EASTERN MARKET CENTRE represents the peak of luxury digital licensing. We bridge the gap between world-class master photographers and global enterprises.
+            </p>
+            <div style="border-top: 1px solid var(--border-color); padding-top: 20px; text-align: center;">
+                <p style="font-size: 12px; font-weight: 700; color: var(--gold); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 5px;">Platform Development Framework:</p>
+                <p style="font-size: 16px; font-weight: 700;">Hafidh Hussein Athuman</p>
+                <p style="font-size: 13px; color: var(--text-muted); margin-top: 3px;">Azania Secondary School, Tanzania</p>
+                <p style="font-size: 13px; color: var(--gold); font-weight: 600; margin-top: 5px;">BLACK AI FOUNDATION ARCHITECTURE</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- CONTACT MODAL -->
+    <div class="modal-overlay" id="contactModal">
+        <div class="modal-content">
+            <span class="close-modal" id="closeContactBtn">&times;</span>
+            <h2>Secure Transmission</h2>
+            <form id="contactForm">
+                <div class="form-group"><label>Identity</label><input type="text" placeholder="Full Corporate Name" required></div>
+                <div class="form-group"><label>Secure Return Routing</label><input type="email" placeholder="secure@email.com" required></div>
+                <div class="form-group"><label>Encrypted Directive</label><textarea rows="4" placeholder="Detail your asset requirements..." required></textarea></div>
+                <button type="submit" class="submit-btn">Launch Secure Broadcast</button>
+            </form>
+        </div>
+    </div>
+    <!-- Kitufe cha Kishua cha WhatsApp kilichofungwa ki-usalama -->
+<div class="whatsapp-container">
+  <a href="https://wa.me/255770212871?text=Habari%20Middle%20Eastern%20Market,%20nimevutiwa%20na%20sanaa%20zenu%20kwenye%20website.%20Naomba%20kujua%20utaratibu%20wa%20kununua." 
+     target="_blank" 
+     rel="noopener noreferrer" 
+     class="whatsapp-btn">
+     <i class="fab fa-whatsapp"></i> Wasiliana Nasi WhatsApp
+  </a>
+</div>
+<!-- ======================================================= -->
+<!-- SEHEMU YA MNADA WA MUBASHARA (LIVE AUCTION SECTION) -->
+<!-- ======================================================= -->
+
+<main id="page-auction" class="site-page">
+<section id="live-auction" class="static-page-hero">
+    <span class="hero-eyebrow"><i class="fas fa-gavel"></i> Bidding Now</span>
+    <h2>Live Online Auction</h2>
+    <p>Shuhudia na ushiriki minada ya picha na michoro ya kishua kimataifa.</p>
+
+    <div class="auction-card">
+        <!-- Picha ya Mnada -->
+        <img id="auction-img" src="/image.jpg" alt="Mnada Live">
+
+        <div class="auction-card-body">
+            <h3 id="auction-title">The Golden African Pride</h3>
+
+            <!-- Countdown Timer -->
+            <div id="timer-box">
+                MUDA ULIOBAKI: <span id="countdown">00:05:00</span>
+            </div>
+
+            <!-- Bei na Dau -->
+            <div class="auction-price-row">
+                <div>
+                    <span class="auction-price-label">Bei ya Kuanzia</span>
+                    <strong class="auction-price-value">$150</strong>
+                </div>
+                <div>
+                    <span class="auction-price-label auction-price-gold">Dau la Juu Sasa hivi</span>
+                    <strong class="auction-price-value auction-price-gold-value">$<span id="current-bid">150</span></strong>
+                </div>
+            </div>
+
+            <!-- LIVE DASHBOARD YAKO MPYA WA USHINDANI -->
+            <div class="bidders-dashboard">
+                <h4>🔥 LIVE BIDDERS (MA-COMPETITORS)</h4>
+                <ul class="bidders-list" id="biddersList">
+                    <!-- Data kutoka Firebase itajaa hapa laivu -->
+                    <li style="color: #777;">Hakuna aliyeweka dau bado...</li>
+                </ul>
+            </div>
+
+            <!-- Button la Kuweka Dau -->
+            <button class="submit-btn" onclick="openBidModal()">
+                WEKA DAU (PLACE BID)
+            </button>
+        </div>
+    </div>
+</section>
+</main>
+<!-- END PAGE: LIVE AUCTION -->
+
+<!-- POPUP MODAL YA MALIPO (SIRI YA MFUMO) — global overlay, reachable regardless of active page -->
+<div id="paymentModal" class="payment-modal">
+    <div class="modal-box">
+        <span class="close-modal" onclick="closeBidModal()">&times;</span>
+        <h3 style="font-family: 'Cinzel', serif; color: #d4af37; margin-top: 0;">THIBITISHA DAU LAKO</h3>
+        <p style="font-size: 0.85rem; color: #ccc; margin-bottom: 20px;">Ili kuzuia dau za uongo, thibitisha taarifa na kiasi chako kupitia njia salama ya malipo.</p>
+        
+        <form id="firebaseBidForm">
+            <label style="font-size: 0.9rem; color: #d4af37;">Jina Lako:</label>
+            <input type="text" id="bidderName" class="form-input" placeholder="Mfano: Hafidh Hussein" required>
+
+            <label style="font-size: 0.9rem; color: #d4af37;">Barua Pepe (Email):</label>
+            <input type="email" id="bidderEmail" class="form-input" placeholder="jina@mfano.com" required>
+
+            <label style="font-size: 0.9rem; color: #d4af37;">Kiasi Unachoweka ($):</label>
+            <input type="number" id="bidAmount" class="form-input" placeholder="Lazima kizidi dau la sasa" required>
+
+            <label style="font-size: 0.9rem; color: #d4af37;">Chagua Njia ya Malipo:</label>
+            <div class="pay-option">
+                <input type="radio" name="payMethod" value="mobile_vodacom" required> 📱 Mobile Money (Vodacom M-Pesa)
+            </div>
+            <div class="pay-option">
+                <input type="radio" name="payMethod" value="card"> 💳 Debit / MasterCard (Visa/Mastercard)
+            </div>
+            <div class="pay-option">
+                <input type="radio" name="payMethod" value="paypal"> 🅿️ PayPal International
+            </div>
+
+            <button type="submit" style="background: linear-gradient(45deg, #d4af37, #aa7c11); color: #000; border: none; padding: 12px; font-weight: bold; border-radius: 5px; cursor: pointer; width: 100%; margin-top: 10px; font-size: 1rem;">
+                THIBITISHA MALIPO & WEKA DAU 🔒
+            </button>
+        </form>
+    </div>
+</div>
+
+<!-- AUCTION WINNER / CONGRATULATIONS MODAL -->
+<div id="auctionWinnerModal" class="modal-overlay winner-modal-overlay">
+    <div class="modal-content winner-modal-content">
+        <div class="winner-trophy-icon"><i class="fas fa-trophy"></i></div>
+        <h2 class="winner-heading">Hongera, <span id="winnerNameSpan">Investor</span>! 🎉</h2>
+        <p class="winner-subtitle">Umeshinda mnada huu kwa heshima kubwa — dau lako lilikuwa la juu zaidi hadi mwisho.</p>
+
+        <div class="winner-art-preview">
+            <img id="winnerArtImg" src="" alt="Artwork Won">
+            <div class="winner-art-info">
+                <h3 id="winnerArtTitle">Artwork Title</h3>
+                <span class="winner-price-label">Dau la Ushindi</span>
+                <strong class="winner-price-value">$<span id="winnerBidAmount">0</span></strong>
+            </div>
+        </div>
+
+        <div class="winner-instructions">
+            <h4><i class="fas fa-envelope-open-text"></i> Hatua Zinazofuata</h4>
+            <p>Uthibitisho tayari umetumwa kwenye barua pepe yako, <strong id="winnerEmailSpan">-</strong>. Timu yetu ya Concierge itawasiliana nawe ndani ya masaa 24 kukamilisha malipo ya mwisho na kukukabidhi <strong>Cheti chako cha Umiliki (Certificate of Authenticity)</strong> pamoja na faili lako la ubora wa hali ya juu (high-resolution master file) kupitia Vault yako.</p>
+            <p class="winner-closing-line">Karibu kwenye familia ya wakusanyaji wa kifahari wa MEM ONLINE. 👑</p>
+        </div>
+
+        <button class="submit-btn" id="closeWinnerModalBtn">Asante, Nimeelewa</button>
+    </div>
+</div>
+
+
+<!-- ======================================================= -->
+<!-- SEHEMU YA WASANII KUPAKIA MICHORO (ARTIST UPLOAD FORM) -->
+<!-- ======================================================= -->
+<main id="page-artist" class="site-page">
+<section id="artist-zone" class="static-page-hero">
+    <h2>Artist Portal</h2>
+    <p>Wasilisha mchoro wako uende mtandaoni na kuuzwa duniani kote.</p>
+
+
+    <div style="max-width: 500px; margin: 0 auto; background: #111; padding: 30px; border-radius: 15px; border: 1px solid #333; text-align: left;">
+
+<!-- Fomu ya Kupakia Mchoro -->
+<form id="auctionForm" style="background: #111; padding: 20px; border-radius: 8px; border: 1px solid #333; max-width: 500px; margin: 0 auto; color: #fff;">
+    <h3 style="color: #d4af37;">Pakia Mchoro Wako wa Mnada</h3>
+    
+    <label>Jina Lako:</label><br>
+    <input type="text" id="artistName" required style="width: 100%; padding: 8px; margin: 8px 0; background: #222; color: #fff; border: 1px solid #444;"><br>
+
+    <label>Jina la Mchoro:</label><br>
+    <input type="text" id="artTitle" required style="width: 100%; padding: 8px; margin: 8px 0; background: #222; color: #fff; border: 1px solid #444;"><br>
+
+    <label>Bei ya Kuanzia (USD):</label><br>
+    <input type="number" id="startPrice" required style="width: 100%; padding: 8px; margin: 8px 0; background: #222; color: #fff; border: 1px solid #444;"><br>
+
+    <label>Pakia Picha ya Mchoro (JPG/PNG tu):</label><br>
+    <input type="file" id="artImage" accept="image/*" required style="margin: 10px 0;"><br>
+
+    <button type="submit" id="submitBtn" style="background: #d4af37; color: #000; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; font-weight: bold; width: 100%;">PELEKA ONLINE</button>
+</form>
+
+<!-- 1. VUTA MA-LIBRARY YA FIREBASE (Pamoja na Storage SDK) -->
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-storage.js"></script> <!-- Hii ndio itabeba picha halisi -->
+
+<script>
+// 2. WEKA FUNGUO (CONFIG) ZAKO HALISI HAPA
+const firebaseConfig = {
+    apiKey: "AIzaSy...",
+    authDomain: "...",
+    projectId: "...",
+    storageBucket: "...", // HAKIKISHA HAPA PANA SOMA VIZURI CHUMBA CHA STORAGE
+    messagingSenderId: "...",
+    appId: "..."
+};
+
+// Washa Firebase
+if (!firebase.apps.length) {
+    firebase.initializeApp(firebaseConfig);
+}
+const db = firebase.firestore();
+const storage = firebase.storage(); // Washa mashine ya Storage!
+
+// 3. MCHAKATO WA KUSAFIRISHA PICHA NA DATA KWA USALAMA
+document.getElementById('auctionForm').addEventListener('submit', async (e) => {
+    e.preventDefault();
+    
+    const submitBtn = document.getElementById('submitBtn');
+    const name = document.getElementById('artistName').value;
+    const title = document.getElementById('artTitle').value;
+    const price = document.getElementById('startPrice').value;
+    const imageFile = document.getElementById('artImage').files[0];
+
+    // Ulinzi wa awali: Hakikisha ni picha kweli
+    if (!imageFile.type.startsWith('image/')) {
+        alert('Mfumo unaruhusu picha tu! Acha ujanja wetu.');
+        return;
+    }
+
+    // Badilisha maandishi ya button ili msanii ajue mzigo unasafiri
+    submitBtn.innerText = "Inapakia Picha Cloud...";
+    submitBtn.disabled = true;
+
+        try {
+        // 1. Tengeneza reference ya picha
+        const storageRef = storage.ref('michoro_ya_wanafunzi/' + Date.now() + '_' + imageFile.name);
+        
+        // 2. Pandisha picha kwa njia salama ya kufuatilia mawasiliano
+        const uploadTask = storageRef.put(imageFile);
+
+        uploadTask.on('state_changed', 
+            (snapshot) => {
+                // Hapa unaweza kufuatilia asilimia za upakiaji kama ukitaka
+                let progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+                submitBtn.innerText = "Inapakia: " + Math.round(progress) + "%";
+            }, 
+            (error) => {
+                // HAPA ITATUPA ERROR MARA MOJA KAMA GOOGLE WAMEZUIA!
+                console.error("Kosa la Storage:", error);
+                alert("Google imezuia picha isipande! Hitilafu: " + error.message);
+                submitBtn.innerText = "PELEKA ONLINE";
+                submitBtn.disabled = false;
+            }, 
+            async () => {
+                // Ikimaliza kupakia kwa mafanikio, vuta URL
+                const downloadURL = await uploadTask.snapshot.ref.getDownloadURL();
+
+                // Sukuma data Firestore
+                await db.collection("waliolipa").add({
+                    msanii: name,
+                    mchoro: title,
+                    bei: price,
+                    picha_nomba: imageFile.name,
+                    picha_url: downloadURL,
+                    status: "pending",
+                    tarehe: new Date()
+                });
+
+                alert("Mchoro wako umepakiwa Cloud kwa mafanikio!");
+                document.getElementById('auctionForm').reset();
+                submitBtn.innerText = "PELEKA ONLINE";
+                submitBtn.disabled = false;
+            }
+        );
+
+    } catch (error) {
+        alert("Hitilafu: " + error.message);
+        submitBtn.innerText = "PELEKA ONLINE";
+        submitBtn.disabled = false;
+    }
+
+
+        // D. SUKUMA DATA ZOTE FIRESTORE (Pamoja na ile Link ya picha)
+        await db.collection("waliolipa").add({
+            msanii: name,
+            mchoro: title,
+            bei: price,
+            picha_nomba: imageFile.name,
+            picha_url: downloadURL, // HII NDIO INAYOKWENDA KUMULIKA KWENYE ADMIN.HTML!
+            status: "pending",     // Inasubiri rungu au kibali chako Hafidh
+            tarehe: new Date()
+        });
+
+        alert("Mchoro wako umepakiwa Cloud kwa mafanikio! Unasubiri kukaguliwa na Injinia Hafidh.");
+        document.getElementById('auctionForm').reset();
+
+    } catch (error) {
+        console.error("Balaa limetokea: ", error);
+        alert("Hitilafu imetokea wakati wa kupakia: " + error.message);
+    } finally {
+        // Rudisha button katika hali ya kawaida
+        submitBtn.innerText = "PELEKA ONLINE";
+        submitBtn.disabled = false;
+    }
+});
+</script>
+<script>
+// JavaScript ya kutuma data Firebase kwa Usalama
+document.getElementById('auctionForm').addEventListener('submit', async (e) => {
+    e.preventDefault();
+    
+    const name = document.getElementById('artistName').value;
+    const title = document.getElementById('artTitle').value;
+    const price = document.getElementById('startPrice').value;
+    const imageFile = document.getElementById('artImage').files[0];
+
+    // Mbinu ya Ulinzi 1: Angalia kama kweli ni picha
+    if (!imageFile.type.startsWith('image/')) {
+        alert('Ona wewe! Mfumo unaruhusu picha tu. Acha ujanja!');
+        return;
+    }
+
+    try {
+        // Hapa tuna-save maelezo Firestore na kuipa STATUS YA PENDING
+        // (Hapa badilisha 'db' iendane na firebase config yako)
+        await db.collection("waliolipa").add({
+            msanii: name,
+            mchoro: title,
+            bei: price,
+            picha_nomba: imageFile.name, // Baadae tutaweka Firebase Storage URL
+            status: "pending", // KIPENGELE CHA USALAMA: Haiendi live hadi uikubali!
+            tarehe: new Date()
+        });
+
+        alert("Mchoro wako umepokelewa kwa mafanikio! Unasubiri kukaguliwa na Admin (Hafidh) kabla ya kwenda Live.");
+        document.getElementById('auctionForm').reset();
+    } catch (error) {
+        console.error("Error adding document: ", error);
+    }
+});
+</script>
+
+<!-- ======================================================= -->
+<!-- LOGIC ZA JAVASCRIPT (AUCTION TIMER & SECURITY CONTROL) -->
+<!-- ======================================================= -->
+<script>
+    // 1. Mfumo wa Dau (Bidding Logic)
+    let currentBidAmount = 150;
+    function placeBid() {
+        currentBidAmount += 25; // Kila click dau linapanda kwa $25
+        document.getElementById('current-bid').innerText = currentBidAmount;
+        alert("Hongera! Dau lako jipya la $" + currentBidAmount + " limewekwa mubashara.");
+    }
+
+    // 2. Mfumo wa Masaa ya Mnada (Countdown Timer)
+    let totalSeconds = 300; // Dakika 5 kwa ajili ya majaribio
+    const countdownElement = document.getElementById('countdown');
+
+    const auctionTimer = setInterval(() => {
+        let minutes = Math.floor(totalSeconds / 60);
+        let seconds = totalSeconds % 60;
+
+        // Kupanga muonekano wa tarakimu mbili mbili
+        minutes = minutes < 10 ? '0' + minutes : minutes;
+        seconds = seconds < 10 ? '0' + seconds : seconds;
+
+        countdownElement.innerText = minutes + ":" + seconds;
+
+        if (totalSeconds <= 0) {
+            clearInterval(auctionTimer);
+            document.getElementById('timer-box').style.background = '#333';
+            document.getElementById('timer-box').innerText = "MNADA UMEFUNGLWA RASMI!";
+            announceAuctionWinner();
+        } else {
+            totalSeconds--;
+        }
+    }, 1000);
+
+    // 3. Mfumo wa Upload, Malipo na Ulinzi (Cybersecurity Validation)
+    function processArtUpload(event) {
+        event.preventDefault();
+
+        const fileInput = document.getElementById('artFile');
+        const file = fileInput.files[0];
+        const artist = document.getElementById('artistName').value;
+        const title = document.getElementById('artTitle').value;
+        const price = document.getElementById('startPrice').value;
+
+        // CYBERSECURITY GUARD: Kukagua aina ya faili (Extension check)
+        const allowedTypes = ['image/jpeg', 'image/png'];
+        if (!allowedTypes.includes(file.type)) {
+            alert("USALAMA: Faili hili limekataliwa! Pakia picha halisi ya JPG au PNG.");
+            return;
+        }
+
+        // Mfumo wa Malipo ya Majaribio (Simulated Payment Gateway)
+        let confirmPayment = confirm("ADA YA USAJILI: Ili kupeleka mchoro wako '" + title + "' mtandaoni, thibitisha malipo ya ada ya usindikaji ($5).");
+        
+        if (confirmPayment) {
+            // Simulizi ya Ujumbe wa Mafanikio (Success Message Interaction)
+            alert("💰 MALIPO YAMEPOKELEWA KWA MAFANIKIO!\n\nUjumbe wa Mfumo: Mchoro wako unapelekwa mtandaoni sasa hivi...");
+            
+            // Kubadilisha picha ya mnada live kuwa ile aliyopakia msanii!
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                document.getElementById('auction-img').src = e.target.result;
+                document.getElementById('auction-title').innerText = title + " (By " + artist + ")";
+                document.getElementById('current-bid').innerText = price;
+                currentBidAmount = parseInt(price);
+                
+                // Rudisha muda upya kwa ajili ya mchoro mpya
+                totalSeconds = 300; 
+                
+                alert("🚀 Kazi yako ipo LIVE sasa hivi duniani kote kwenye duka la Middle Eastern Market Centre!");
+            }
+            reader.readAsDataURL(file);
+            
+            // Safisha fomu
+            document.getElementById('uploadForm').reset();
+        } else {
+            alert("Malipo yamekatishwa. Mchoro haujawekwa mtandaoni.");
+        }
+    }
+</script>
+
+<!-- ======================================================= -->
+<!-- BIDDING PAYMENT MODAL LOGIC (Jina, Email, Kiasi, Njia ya Malipo) -->
+<!-- ======================================================= -->
+<script>
+    const bidPaymentModalEl = document.getElementById('paymentModal');
+    const winnerModalEl = document.getElementById('auctionWinnerModal');
+    let currentWinnerName = '';
+    let currentWinnerEmail = '';
+
+    window.openBidModal = function() {
+        bidPaymentModalEl.classList.add('show');
+    };
+
+    window.closeBidModal = function() {
+        bidPaymentModalEl.classList.remove('show');
+    };
+
+    // Funga modal ukibofya nje ya box
+    bidPaymentModalEl.addEventListener('click', function(e) {
+        if (e.target === bidPaymentModalEl) closeBidModal();
+    });
+
+    document.getElementById('firebaseBidForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+
+        const name = document.getElementById('bidderName').value.trim();
+        const email = document.getElementById('bidderEmail').value.trim();
+        const amount = parseInt(document.getElementById('bidAmount').value);
+        const methodInput = document.querySelector('input[name="payMethod"]:checked');
+
+        if (!methodInput) {
+            alert("Tafadhali chagua njia ya malipo (Mobile Money, Debit/MasterCard, au PayPal).");
+            return;
+        }
+        if (amount <= currentBidAmount) {
+            alert("Dau lako lazima lizidi dau la sasa la $" + currentBidAmount + ".");
+            return;
+        }
+
+        const methodLabels = {
+            mobile_vodacom: "Mobile Money (Vodacom M-Pesa)",
+            card: "Debit / MasterCard",
+            paypal: "PayPal International"
+        };
+
+        // Sasisha dau la sasa na kumbuka aliyeweka dau la juu (mshindi wa sasa)
+        currentBidAmount = amount;
+        currentWinnerName = name;
+        currentWinnerEmail = email;
+        document.getElementById('current-bid').innerText = currentBidAmount;
+
+        // Ongeza kwenye orodha ya Live Bidders
+        const biddersListEl = document.getElementById('biddersList');
+        const placeholder = biddersListEl.querySelector('li');
+        if (placeholder && placeholder.style.color === 'rgb(119, 119, 119)') {
+            biddersListEl.innerHTML = '';
+        }
+        const li = document.createElement('li');
+        li.innerHTML = `<span>${name}</span><strong style="color:var(--gold);">$${currentBidAmount}</strong>`;
+        biddersListEl.prepend(li);
+
+        // Hifadhi historia ya mnada kwenye Database ya Ndani (kwa ukurasa wa Transaction History)
+        const auctionTitleEl2 = document.getElementById('auction-title');
+        const auctionImgEl2 = document.getElementById('auction-img');
+        const artTitleNow = auctionTitleEl2 ? auctionTitleEl2.innerText : 'Live Auction Item';
+        let bidHistory = JSON.parse(localStorage.getItem('auction_bid_history')) || [];
+        // Dau za awali za mchoro huu huu zibadilishwe kuwa "Outbid"
+        bidHistory = bidHistory.map(b => (b.artTitle === artTitleNow && b.status === 'Leading Bid') ? { ...b, status: 'Outbid' } : b);
+        bidHistory.push({
+            bidId: 'BID-' + Date.now(),
+            artTitle: artTitleNow,
+            artImage: auctionImgEl2 ? auctionImgEl2.src : '',
+            bidderName: name,
+            bidderEmail: email,
+            amount: currentBidAmount,
+            paymentMethod: methodLabels[methodInput.value],
+            status: 'Leading Bid',
+            timestamp: new Date().toLocaleString()
+        });
+        localStorage.setItem('auction_bid_history', JSON.stringify(bidHistory));
+
+        alert(`⚡ DAU LIMEPOKELEWA KWA MAFANIKIO!\n\nJina: ${name}\nEmail: ${email}\nKiasi: $${currentBidAmount}\nNjia ya Malipo: ${methodLabels[methodInput.value]}\n\nAsante kwa kushiriki mnada wa MEM ONLINE!`);
+
+        this.reset();
+        closeBidModal();
+    });
+
+    // Mnada ukiisha muda, mshindi (dau la juu zaidi) apewe ujumbe wa hongera
+    window.announceAuctionWinner = function() {
+        if (!currentWinnerName) {
+            // Hakuna aliyewahi kuweka dau halisi kupitia fomu
+            alert("Muda umekwisha! Mnada umefungwa lakini hakuna dau lililowekwa. Bei ya mwisho ilibaki $" + currentBidAmount + ".");
+            return;
+        }
+
+        // Sasisha historia: dau lililoshinda liwe "WON"
+        const auctionTitleEl3 = document.getElementById('auction-title');
+        const artTitleWon = auctionTitleEl3 ? auctionTitleEl3.innerText : 'Live Auction Item';
+        let bidHistory2 = JSON.parse(localStorage.getItem('auction_bid_history')) || [];
+        bidHistory2 = bidHistory2.map(b => (b.artTitle === artTitleWon && b.status === 'Leading Bid') ? { ...b, status: 'WON' } : b);
+        localStorage.setItem('auction_bid_history', JSON.stringify(bidHistory2));
+
+        document.getElementById('winnerNameSpan').innerText = currentWinnerName;
+        document.getElementById('winnerEmailSpan').innerText = currentWinnerEmail || 'barua pepe yako';
+        document.getElementById('winnerBidAmount').innerText = currentBidAmount;
+
+        const auctionImgEl = document.getElementById('auction-img');
+        const auctionTitleEl = document.getElementById('auction-title');
+        document.getElementById('winnerArtImg').src = auctionImgEl ? auctionImgEl.src : '';
+        document.getElementById('winnerArtTitle').innerText = auctionTitleEl ? auctionTitleEl.innerText : 'Masterpiece';
+
+        winnerModalEl.classList.add('active');
+    };
+
+    document.getElementById('closeWinnerModalBtn').addEventListener('click', () => winnerModalEl.classList.remove('active'));
+    winnerModalEl.addEventListener('click', function(e) {
+        if (e.target === winnerModalEl) winnerModalEl.classList.remove('active');
+    });
+</script>
+
+</section>
+</main>
+<!-- END PAGE: ARTIST PORTAL -->
+
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2026 MIDDLE EASTERN MARKET CENTRE. All Rights Reserved.</p>
+        <p style="font-size: 12px; margin-top: 10px; color: var(--text-muted);">
+            Architectured by <strong>Hafidh Hussein Athuman</strong>. Authorized by <strong>Black AI Foundation</strong>.
+        </p>
+    </footer>
+
+    <!-- MAIN CUSTOM SCRIPT LINK -->
+    <script src="script.js"></script>
+
+    <!-- ======================================================= -->
+    <!-- NEW UI-ONLY LOGIC: header account link, header category  -->
+    <!-- dropdown sync, and Amazon-style Quick View modal.        -->
+    <!-- Purely additive — does not touch script.js or any        -->
+    <!-- Firebase / cart / auction logic above.                   -->
+    <!-- ======================================================= -->
+    <script>
+    (function() {
+        // Header "Account" utility link opens the same Investor Profile modal
+        const headerAccountBtn = document.getElementById('headerAccountBtn');
+        const profileModalEl = document.getElementById('profileModal');
+        if (headerAccountBtn && profileModalEl) {
+            headerAccountBtn.addEventListener('click', () => profileModalEl.classList.add('active'));
+        }
+
+        // ---- Multi-page navigation (Home / Services / About / Auction / Artist / Buying) ----
+        const sitePages = document.querySelectorAll('.site-page');
+        const pageNavLinks = document.querySelectorAll('[data-page-target]');
+        const openCartBtnEl = document.getElementById('openCartBtn');
+
+        function showSitePage(targetId) {
+            sitePages.forEach(p => p.classList.toggle('active', p.id === targetId));
+            pageNavLinks.forEach(l => l.classList.toggle('active', l.dataset.pageTarget === targetId));
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        pageNavLinks.forEach(link => {
+            link.addEventListener('click', function(e) {
+                const target = this.dataset.pageTarget;
+                if (target === 'open-cart') {
+                    if (openCartBtnEl) openCartBtnEl.click();
+                    return;
+                }
+                e.preventDefault();
+                showSitePage(target);
+            });
+        });
+
+        // Ikiwa mtu amefika na kiungo cha #page-xxx (mfano kutoka transaction-history.html)
+        const hashTarget = window.location.hash.replace('#', '');
+        if (hashTarget && document.getElementById(hashTarget) && document.getElementById(hashTarget).classList.contains('site-page')) {
+            showSitePage(hashTarget);
+        }
+
+        // Header category dropdown re-uses the existing .cat-btn filter engine
+        const searchCategorySelect = document.getElementById('searchCategorySelect');
+        if (searchCategorySelect) {
+            searchCategorySelect.addEventListener('change', function() {
+                const matchingBtn = document.querySelector('.cat-btn[data-filter="' + this.value + '"]');
+                if (matchingBtn) matchingBtn.click();
+            });
+        }
+
+        // Amazon-style Quick View modal
+        const quickViewModal = document.getElementById('quickViewModal');
+        const closeQuickViewBtn = document.getElementById('closeQuickViewBtn');
+        const qvImage = document.getElementById('qvImage');
+        const qvTag = document.getElementById('qvTag');
+        const qvTitle = document.getElementById('qvTitle');
+        const qvArtist = document.getElementById('qvArtist');
+        const qvPrice = document.getElementById('qvPrice');
+        const qvAddToVaultBtn = document.getElementById('qvAddToVaultBtn');
+        const gridContainer = document.getElementById('artGridContainer');
+        let activeCardForQuickView = null;
+
+        function openQuickView(card) {
+            if (!card) return;
+            activeCardForQuickView = card;
+            const img = card.querySelector('img');
+            const tag = card.querySelector('.premium-tag');
+            const title = card.querySelector('h3');
+            const artist = card.querySelector('.artist');
+            const price = card.querySelector('.price');
+
+            if (img) { qvImage.src = img.getAttribute('src'); qvImage.alt = img.getAttribute('alt') || ''; }
+            if (tag) qvTag.innerText = tag.innerText;
+            if (title) qvTitle.innerText = title.innerText;
+            if (artist) qvArtist.innerText = artist.innerText;
+            if (price) qvPrice.innerText = price.innerText;
+
+            quickViewModal.classList.add('active');
+        }
+
+        if (gridContainer) {
+            gridContainer.addEventListener('click', function(e) {
+                const qvBtn = e.target.closest('.quick-view-btn');
+                if (qvBtn) {
+                    e.stopPropagation();
+                    openQuickView(qvBtn.closest('.art-card'));
+                }
+            });
+        }
+
+        if (closeQuickViewBtn) {
+            closeQuickViewBtn.addEventListener('click', () => quickViewModal.classList.remove('active'));
+        }
+        if (quickViewModal) {
+            quickViewModal.addEventListener('click', (e) => { if (e.target === quickViewModal) quickViewModal.classList.remove('active'); });
+        }
+        if (qvAddToVaultBtn) {
+            qvAddToVaultBtn.addEventListener('click', function() {
+                if (activeCardForQuickView) {
+                    const realBuyBtn = activeCardForQuickView.querySelector('.buy-btn');
+                    if (realBuyBtn) realBuyBtn.click();
+                }
+                quickViewModal.classList.remove('active');
+            });
+        }
+    })();
+    </script>
+
+    <!-- FIREBASE COMPAT LIBRARIES -->
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore-compat.js"></script>
+
+    <!-- FIREBASE INITIALIZATION AND LOGIC -->
+    <script>
+      const firebaseConfig = {
+        apiKey: "AIzaSyANHZ17JUD_Y7aa0U...", // <--- WEKA API KEY YAKO KAMILI HAPA
+        authDomain: "middle-eastern-market-centre.firebaseapp.com",
+        projectId: "middle-eastern-market-centre",
+        storageBucket: "middle-eastern-market-centre.appspot.com",
+        messagingSenderId: "1027347399712",
+        appId: "1:1027347399712:web:20b...", // <--- WEKA APP ID YAKO KAMILI HAPA
+        measurementId: "G-F487G4K8GX"
+      };
+
+      // Washa mifumo ya Firebase na Database
+      firebase.initializeApp(firebaseConfig);
+      const db = firebase.firestore();
+
+      // Kushika fomu kwa kutumia ID halisi iliyopo kwenye HTML
+      const fomuYaMalipo = document.getElementById('advancedPurchaseForm');
+
+      if (fomuYaMalipo) {
+          fomuYaMalipo.addEventListener('submit', (e) => {
+              e.preventDefault(); 
+              // Kuchukua data kwa kutumia ID sahihi za input za fomu yako
+              const mtejaJina = document.getElementById('fullName').value;
+              const mtejaEmail = document.getElementById('emailAddress').value;
+              const njiaNyenye = document.getElementById('paymentMethod').value;
+              
+              // Kuchukua jumla ya pesa iliyo kwenye fomu kwa sasa
+              const jumlaYaPesa = document.getElementById('cartTotalLabel') ? document.getElementById('cartTotalLabel').innerText : "$850";
+
+              // Tuma mzigo mzima kwenda kwenye folda la 'waliolipa' mtandaoni
+              db.collection('waliolipa').add({
+                  investor_name: mtejaJina,
+                  email_address: mtejaEmail,
+                  clearance_channel: njiaNyenye,
+                  total_value: jumlaYaPesa,
+                  muda: firebase.firestore.FieldValue.serverTimestamp()
+              })
+              .then((docRef) => {
+                  console.log("Data imerekodiwa kwa ID: ", docRef.id);
+                  alert("TRANSACTION AUTHORIZED SUCCESSFULLY!\n\nTaarifa zako zimehifadhiwa salama kwenye Database.");
+                  fomuYaMalipo.reset(); 
+              })
+              .catch((error) => {
+                  console.error("Kuna hitilafu imetokea: ", error);
+                  alert("Imeshindikana kutuma! Hakikisha una bando la internet au kodi zako za Firebase ziko sawa.");
+              });
+          });
+      } else {
+          console.error("Haikuweza kupata fomu ya advancedPurchaseForm kwenye HTML!");
+      }
+    </script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-F487G4K8GX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-F487G4K8GX');
+</script>
+
+<!-- Liunganishe faili la app.js chini kabisa ya HTML -->
+    <script type="module" src="app.js"></script>
+        <!-- Hii italeta muonekano mzima wa Footer na mifumo ya kodi ya Google -->
+    <script src="mem-footer.js"></script>
+</body>
+</html>

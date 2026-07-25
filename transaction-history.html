@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="sw">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transaction History — MEM ONLINE</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght=600;800&family=Montserrat:wght=300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="/file_00000000477c71fbb4d9505b708edca9.png">
+</head>
+<body>
+
+    <!-- STANDALONE PAGE HEADER -->
+    <header class="standalone-header">
+        <div class="header-row">
+            <a href="index.html" class="brand-logo">
+                <span class="brand-logo-main">MIDDLE EASTERN</span>
+                <span class="brand-logo-sub">MARKET CENTRE</span>
+            </a>
+            <a href="index.html" class="utility-link"><i class="fas fa-arrow-left"></i> <span class="utility-text">Rudi Dukani</span></a>
+        </div>
+    </header>
+
+    <main class="standalone-page">
+        <div class="static-page-hero">
+            <span class="hero-eyebrow"><i class="fas fa-clock-rotate-left"></i> Your Records</span>
+            <h2>Transaction &amp; Auction History</h2>
+            <p>Historia kamili ya bidhaa ulizonunua, maelezo ya usafirishaji, na minada ya moja kwa moja uliyoshiriki.</p>
+        </div>
+
+        <!-- TAB SWITCH -->
+        <div class="history-tabs">
+            <button class="history-tab-btn active" data-tab="purchases"><i class="fas fa-receipt"></i> Historia ya Ununuzi</button>
+            <button class="history-tab-btn" data-tab="auctions"><i class="fas fa-gavel"></i> Historia ya Mnada</button>
+        </div>
+
+        <!-- PURCHASE HISTORY -->
+        <div class="standalone-container history-section active" id="tab-purchases">
+            <div id="purchaseHistoryList" class="order-history-list"></div>
+        </div>
+
+        <!-- AUCTION HISTORY -->
+        <div class="standalone-container history-section" id="tab-auctions">
+            <div id="auctionHistoryList" class="order-history-list"></div>
+        </div>
+    </main>
+
+    <footer class="standalone-footer">
+        <p>&copy; <span id="yearNow"></span> MIDDLE EASTERN MARKET CENTRE (MEM ONLINE) — BLACK AI FOUNDATION</p>
+    </footer>
+
+<script>
+    document.getElementById('yearNow').innerText = new Date().getFullYear();
+
+    // ---- Tab switching ----
+    document.querySelectorAll('.history-tab-btn').forEach(btn => {
+        btn.addEventListener('click', function() {
+            document.querySelectorAll('.history-tab-btn').forEach(b => b.classList.remove('active'));
+            document.querySelectorAll('.history-section').forEach(s => s.classList.remove('active'));
+            this.classList.add('active');
+            document.getElementById('tab-' + this.dataset.tab).classList.add('active');
+        });
+    });
+
+    // ---- Render Purchase History ----
+    const orders = (JSON.parse(localStorage.getItem('all_database_orders')) || []).slice().reverse();
+    const purchaseListEl = document.getElementById('purchaseHistoryList');
+
+    if (orders.length === 0) {
+        purchaseListEl.innerHTML = `<div class="empty-state"><i class="fas fa-receipt"></i><p>Bado hujafanya ununuzi wowote.</p><a href="index.html" class="hero-cta-btn hero-cta-primary">Shop Masterpieces</a></div>`;
+    } else {
+        orders.forEach(order => {
+            const card = document.createElement('div');
+            card.className = 'order-card';
+
+            const itemsHtml = (order.items || []).map(it => `
+                <div class="order-item-row">
+                    <img src="${it.image}" alt="${it.title}">
+                    <span>${it.title}</span>
+                    <strong>$${(it.price || 0).toLocaleString()}</strong>
+                </div>
+            `).join('') || `<p class="order-item-fallback">${order.assets_purchased || ''}</p>`;
+
+            card.innerHTML = `
+                <div class="order-card-header">
+                    <div>
+                        <span class="order-id">#${order.orderId || 'MEM-ORDER'}</span>
+                        <span class="order-date"><i class="far fa-clock"></i> ${order.timestamp || ''}</span>
+                    </div>
+                    <span class="status-badge status-confirmed">${order.status || 'Confirmed'}</span>
+                </div>
+
+                <div class="order-items-block">${itemsHtml}</div>
+
+                <div class="order-detail-grid">
+                    <div><span>Mnunuzi</span><strong>${order.investor || '-'}</strong></div>
+                    <div><span>Barua Pepe</span><strong>${order.email || '-'}</strong></div>
+                    <div><span>Njia ya Malipo</span><strong>${(order.payment_gateway || '-').toString().toUpperCase()}</strong></div>
+                    <div><span>Jumla ya Malipo</span><strong class="highlight-gold">${order.total_paid || '$0'}</strong></div>
+                    <div class="span-2"><span><i class="fas fa-truck-fast"></i> Anwani ya Usafirishaji</span><strong>${order.shipping_address || 'Haijawekwa'}</strong></div>
+                    <div class="span-2"><span><i class="fas fa-box"></i> Njia ya Usafirishaji</span><strong>${order.delivery_method || 'Standard Vault Delivery'}</strong></div>
+                </div>
+            `;
+            purchaseListEl.appendChild(card);
+        });
+    }
+
+    // ---- Render Auction History ----
+    const bids = (JSON.parse(localStorage.getItem('auction_bid_history')) || []).slice().reverse();
+    const auctionListEl = document.getElementById('auctionHistoryList');
+
+    if (bids.length === 0) {
+        auctionListEl.innerHTML = `<div class="empty-state"><i class="fas fa-gavel"></i><p>Bado hujashiriki mnada wowote wa moja kwa moja.</p><a href="index.html#page-auction" class="hero-cta-btn hero-cta-primary" onclick="localStorage.setItem('pendingPage','page-auction')">Join Live Auction</a></div>`;
+    } else {
+        const statusClassMap = { 'WON': 'status-won', 'Leading Bid': 'status-leading', 'Outbid': 'status-outbid' };
+        const statusLabelMap = { 'WON': '🏆 Umeshinda', 'Leading Bid': 'Dau la Juu (Live)', 'Outbid': 'Umezidiwa' };
+
+        bids.forEach(bid => {
+            const card = document.createElement('div');
+            card.className = 'order-card';
+            const badgeClass = statusClassMap[bid.status] || 'status-confirmed';
+            const badgeLabel = statusLabelMap[bid.status] || bid.status;
+
+            card.innerHTML = `
+                <div class="order-card-header">
+                    <div>
+                        <span class="order-id">#${bid.bidId || 'BID'}</span>
+                        <span class="order-date"><i class="far fa-clock"></i> ${bid.timestamp || ''}</span>
+                    </div>
+                    <span class="status-badge ${badgeClass}">${badgeLabel}</span>
+                </div>
+
+                <div class="order-item-row">
+                    <img src="${bid.artImage || ''}" alt="${bid.artTitle || ''}">
+                    <span>${bid.artTitle || 'Live Auction Item'}</span>
+                    <strong class="highlight-gold">$${(bid.amount || 0).toLocaleString()}</strong>
+                </div>
+
+                <div class="order-detail-grid">
+                    <div><span>Mzabuni</span><strong>${bid.bidderName || '-'}</strong></div>
+                    <div><span>Barua Pepe</span><strong>${bid.bidderEmail || '-'}</strong></div>
+                    <div class="span-2"><span>Njia ya Malipo</span><strong>${bid.paymentMethod || '-'}</strong></div>
+                </div>
+            `;
+            auctionListEl.appendChild(card);
+        });
+    }
+</script>
+    <!-- Hii italeta muonekano mzima wa Footer na mifumo ya kodi ya Google -->
+    <script src="mem-footer.js"></script>
+</body>
+</html>

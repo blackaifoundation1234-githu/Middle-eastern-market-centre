@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="sw">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Cart — MEM ONLINE</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght=600;800&family=Montserrat:wght=300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="/file_00000000477c71fbb4d9505b708edca9.png">
+</head>
+<body>
+
+    <!-- STANDALONE PAGE HEADER -->
+    <header class="standalone-header">
+        <div class="header-row">
+            <a href="index.html" class="brand-logo">
+                <span class="brand-logo-main">MIDDLE EASTERN</span>
+                <span class="brand-logo-sub">MARKET CENTRE</span>
+            </a>
+            <a href="index.html" class="utility-link"><i class="fas fa-arrow-left"></i> <span class="utility-text">Rudi Dukani</span></a>
+        </div>
+    </header>
+
+    <main class="standalone-page">
+        <div class="static-page-hero">
+            <span class="hero-eyebrow"><i class="fas fa-cart-shopping"></i> Your Vault</span>
+            <h2>Product Cart</h2>
+            <p>Kagua bidhaa ulizoziweka kwenye Vault yako kabla ya kuthibitisha malipo na kupata leseni yako.</p>
+        </div>
+
+        <div class="standalone-container cart-page-layout">
+            <div class="cart-page-items">
+                <h3 class="standalone-subheading"><i class="fas fa-boxes-stacked"></i> Bidhaa Kwenye Cart Yako</h3>
+                <div id="standaloneCartItems" class="standalone-cart-list">
+                    <!-- Imejazwa na JavaScript kutoka localStorage -->
+                </div>
+            </div>
+
+            <div class="cart-page-summary">
+                <div class="cart-summary-box">
+                    <h3 class="standalone-subheading"><i class="fas fa-receipt"></i> Muhtasari wa Malipo</h3>
+                    <div class="cart-summary-row"><span>Bidhaa</span><strong id="summaryItemCount">0</strong></div>
+                    <div class="cart-summary-row cart-summary-total"><span>Jumla ya Malipo</span><strong id="summaryTotal">$0</strong></div>
+
+                    <form id="standaloneCheckoutForm">
+                        <div class="form-group"><label>Investor Name</label><input type="text" id="scFullName" placeholder="Your Name" required></div>
+                        <div class="form-group"><label>Email Address</label><input type="email" id="scEmailAddress" placeholder="investor@domain.com" required></div>
+                        <div class="form-group"><label>Shipping / Delivery Address</label><input type="text" id="scShippingAddress" placeholder="Mtaa, Jiji, Nchi" required></div>
+                        <div class="form-group"><label>Delivery Method</label>
+                            <select id="scDeliveryMethod">
+                                <option value="standard">Standard Vault Delivery (3-5 Days)</option>
+                                <option value="express">Express Concierge Delivery (24 Hrs)</option>
+                            </select>
+                        </div>
+                        <div class="form-group"><label>Clearance Channel</label>
+                            <select id="scPaymentMethod">
+                                <option value="stripe">Encrypted Debit Card Connection</option>
+                                <option value="paypal">PayPal Global Network</option>
+                                <option value="mobile_vodacom">Mobile Money (Vodacom M-Pesa)</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="submit-btn">Authorize Asset Transfer</button>
+                    </form>
+
+                    <a href="transaction-history.html" class="view-history-link"><i class="fas fa-clock-rotate-left"></i> View Transaction &amp; Auction History</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="standalone-footer">
+        <p>&copy; <span id="yearNow"></span> MIDDLE EASTERN MARKET CENTRE (MEM ONLINE) — BLACK AI FOUNDATION</p>
+    </footer>
+
+<script>
+    document.getElementById('yearNow').innerText = new Date().getFullYear();
+
+    function getCart() { return JSON.parse(localStorage.getItem('market_cart')) || []; }
+    function saveCart(cart) { localStorage.setItem('market_cart', JSON.stringify(cart)); }
+
+    function renderStandaloneCart() {
+        const cart = getCart();
+        const listEl = document.getElementById('standaloneCartItems');
+        const countEl = document.getElementById('summaryItemCount');
+        const totalEl = document.getElementById('summaryTotal');
+
+        listEl.innerHTML = '';
+        countEl.innerText = cart.length;
+
+        if (cart.length === 0) {
+            listEl.innerHTML = `<div class="empty-state"><i class="fas fa-cart-shopping"></i><p>Vault yako iko wazi. Rudi dukani uchague masterpiece.</p><a href="index.html" class="hero-cta-btn hero-cta-primary">Shop Masterpieces</a></div>`;
+            totalEl.innerText = '$0';
+            return;
+        }
+
+        let total = 0;
+        cart.forEach((item, index) => {
+            total += item.price;
+            const row = document.createElement('div');
+            row.className = 'standalone-cart-row';
+            row.innerHTML = `
+                <img src="${item.image}" alt="${item.title}">
+                <div class="standalone-cart-row-info">
+                    <h4>${item.title}</h4>
+                    <span class="standalone-cart-price">$${item.price.toLocaleString()}</span>
+                </div>
+                <button class="standalone-remove-btn" data-index="${index}"><i class="fas fa-trash-can"></i></button>
+            `;
+            listEl.appendChild(row);
+        });
+        totalEl.innerText = '$' + total.toLocaleString();
+
+        listEl.querySelectorAll('.standalone-remove-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const idx = parseInt(this.dataset.index);
+                const cartNow = getCart();
+                cartNow.splice(idx, 1);
+                saveCart(cartNow);
+                renderStandaloneCart();
+            });
+        });
+    }
+
+    document.getElementById('standaloneCheckoutForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        const cart = getCart();
+        if (cart.length === 0) {
+            alert("Vault yako iko wazi. Ongeza bidhaa kabla ya kuthibitisha malipo.");
+            return;
+        }
+
+        const investorName = document.getElementById('scFullName').value;
+        const investorEmail = document.getElementById('scEmailAddress').value;
+        const shippingAddressVal = document.getElementById('scShippingAddress').value;
+        const deliveryMethodVal = document.getElementById('scDeliveryMethod').value;
+        const channel = document.getElementById('scPaymentMethod').value;
+        const total = cart.reduce((sum, item) => sum + item.price, 0);
+
+        const deliveryLabels = { standard: 'Standard Vault Delivery (3-5 Days)', express: 'Express Concierge Delivery (24 Hrs)' };
+
+        const orderData = {
+            orderId: 'MEM-' + Date.now(),
+            investor: investorName,
+            email: investorEmail,
+            payment_gateway: channel,
+            total_paid: '$' + total.toLocaleString(),
+            items: cart.map(item => ({ title: item.title, price: item.price, image: item.image })),
+            assets_purchased: cart.map(item => item.title).join(', '),
+            shipping_address: shippingAddressVal,
+            delivery_method: deliveryLabels[deliveryMethodVal] || deliveryMethodVal,
+            status: 'Confirmed',
+            timestamp: new Date().toLocaleString()
+        };
+
+        let allOrders = JSON.parse(localStorage.getItem('all_database_orders')) || [];
+        allOrders.push(orderData);
+        localStorage.setItem('all_database_orders', JSON.stringify(allOrders));
+
+        let successfulPurchases = parseInt(localStorage.getItem('successful_purchases')) || 0;
+        successfulPurchases += cart.length;
+        localStorage.setItem('successful_purchases', successfulPurchases);
+
+        saveCart([]);
+        renderStandaloneCart();
+        this.reset();
+
+        alert(`⚡ TRANSACTION AUTHORIZED SUCCESSFULLY!\n\nDear ${investorName},\nYour payment of ${orderData.total_paid} via ${channel.toUpperCase()} has been verified.\nDelivery: ${orderData.delivery_method}\nAddress: ${shippingAddressVal}\n\nThank you for choosing Middle Eastern Market Centre.`);
+
+        window.location.href = 'transaction-history.html';
+    });
+
+    renderStandaloneCart();
+</script>
+    <!-- Hii italeta muonekano mzima wa Footer na mifumo ya kodi ya Google -->
+    <script src="mem-footer.js"></script>
+</body>
+</html>
